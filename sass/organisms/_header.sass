@@ -21,6 +21,10 @@ header
         attachment: fixed
         size: cover
         position-y: -100px
+        +breakpoint($tablet)
+            position-y: 0px
+        +breakpoint($celular)
+            position-y: 0px
 
     .logo
         float: left
