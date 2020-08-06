@@ -21,10 +21,20 @@ header
         attachment: fixed
         size: cover
         position-y: -100px
-        +breakpoint($tablet)
-            position-y: 0px
-        +breakpoint($celular)
-            position-y: 0px
+    +breakpoint($tablet)
+        background: 
+            image: url('../images/bg-topo2.jpeg')
+            position: top center
+            repeat: no-repeat
+            attachment: fixed
+            size: cover
+    +breakpoint($celular)
+        background: 
+            image: url('../images/bg-topo2.jpeg')
+            position: top center
+            repeat: no-repeat
+            attachment: fixed
+            size: cover
 
     .logo
         float: left
