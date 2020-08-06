@@ -1,0 +1,39 @@
+section.sobre
+    h2
+        text-align: center
+        margin: 20px 0px
+        +font-size(4rem)
+        font-weight: $bold
+        font-family: 'serif'
+        font-style: italic
+        +color-gradient(90deg, $light-green, $light-blue)
+    .items
+        width: 100%
+        margin: 20px 0px
+        padding: 20px 100px
+        .panel-profissional
+            +make-md-column(6)
+            +make-sm-column(12)
+            +make-lg-column(6)
+            h3
+                font-family: 'serif'
+                font-weight: $bold
+                font-style: italic
+                +color-gradient(90deg, $light-green, $light-blue)
+                +font-size(3rem)
+
+            .photo
+                +img-responsive
+                margin-top: 30px
+                border: solid 2px $light-blue 
+                border-radius: 150px
+                display: inline
+            .button
+                display: table
+                margin: 15px auto 0px auto
+    .text-technowl
+        +flexbox
+        text-align: center
+        margin: 20px 0px
+        +make-sm-column(8)
+        +make-sm-column-offset(2)
