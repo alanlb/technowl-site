@@ -36,48 +36,53 @@ header
             attachment: fixed
             size: cover
 
-    .logo
-        float: left
-        margin-top: 25px
-    .links
-        float: right
-        margin-top: 35px
-
-        nav,
-        .social
-            display: inline-block
-
-        nav
-            +breakpoint($celular)
-                display: none
-
-            +breakpoint($tablet)
-                display: none
-
-            ul
-                li  
-                    margin-right: 30px
-                    display: inline-block
-                    a   
-                        font-size: 17px
-                        color: $white
-                        text-transform: uppercase
-                        text-decoration: none
-                        font-weight: $bold
+    
         
-        .social        
-            li
-                margin-right: 10px
+    nav
+        background-color: transparent
+        transition: background-color 200ms linear
+        padding: 15px 30px 15px 30px
+        
+        .logo
+            float: left
+            img
+                +img-responsive
+                height: 40px
+        +breakpoint($celular)
+            ul
+                display: none
+
+        +breakpoint($tablet)
+            ul
+                display: none
+
+        ul
+            float: right
+            li  
+                margin-right: 30px
                 display: inline-block
-                a    
-                    color: $white
+                a   
+                    font-size: 17px
+                    color: $white !important
+                    text-transform: uppercase
+                    text-decoration: none
+                    font-weight: $bold
                     display: block
-                    border: solid 2px $white
-                    border-radius: 15px
-                    padding: 5px
-                    width: 30px
-                    height: 30px
-                    text-align: center
+    
+        .fa-facebook,
+        .fa-github-alt  
+            color: $white
+            display: block
+            border: solid 2px $white
+            border-radius: 15px
+            padding: 5px
+            width: 30px
+            height: 30px
+            text-align: center
+
+    nav.scrolled
+            background-color: #000000 !important
+            transition: background-color 200ms linear
     h1
         color: $white
         clear: both

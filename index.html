@@ -14,25 +14,21 @@
 <body>
     <header>
         <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="logo Topo Tag">
-                </a>
-            </div>
-            <div class="links">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="">Sobre</a></li>
-                        <li><a href="">Equipe</a></li>
-                        <li><a href="">Contato</a></li>
-                    </ul>
-                </nav>
-                <ul class="social">
+            <nav class="navbar navbar-fixed-top">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="logo Topo Tag">
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="">Equipe</a></li>
+                    <li><a href="">Contato</a></li>
                     <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                     <li><a href="#"><i class="fa fa-github-alt" aria-hidden="true"></i></a></li>
                 </ul>
-            </div>
+            </nav>
             <h1><strong>TechnOwl</strong></h1>
             <h3><strong>Desenvolvimento de Softwares</strong></h3>
         </div>
@@ -44,9 +40,15 @@
                     <h2>TechnOwl</h2>
                 </div>
                 <div class="text-technowl row">
-                    <p><strong>Lorem ipsum dolor sit</strong>, amet consectetur adipisicing elit. Debitis iure laborum ullam, recusandae animi voluptate, qui deserunt sed suscipit iste incidunt dolorum, nesciunt hic. Illo consequuntur eum autem at nostrum.
-                    Sunt perferendis recusandae porro praesentium minus doloribus fugiat, omnis quam quibusdam. Similique quis laborum quisquam voluptates sunt! Necessitatibus aspernatur, doloribus deserunt iure mollitia numquam ab porro, rerum aperiam praesentium vel.
-                    Distinctio, odio quo. Perspiciatis officiis commodi delectus error obcaecati, mollitia molestiae impedit possimus odit veniam repudiandae labore quis dolores recusandae aperiam totam! Accusamus, similique voluptatibus voluptates nemo eum error porro!</p>
+                    <p><strong>Lorem ipsum dolor sit</strong>, amet consectetur adipisicing elit. Debitis iure laborum
+                        ullam, recusandae animi voluptate, qui deserunt sed suscipit iste incidunt dolorum, nesciunt
+                        hic. Illo consequuntur eum autem at nostrum.
+                        Sunt perferendis recusandae porro praesentium minus doloribus fugiat, omnis quam quibusdam.
+                        Similique quis laborum quisquam voluptates sunt! Necessitatibus aspernatur, doloribus deserunt
+                        iure mollitia numquam ab porro, rerum aperiam praesentium vel.
+                        Distinctio, odio quo. Perspiciatis officiis commodi delectus error obcaecati, mollitia molestiae
+                        impedit possimus odit veniam repudiandae labore quis dolores recusandae aperiam totam!
+                        Accusamus, similique voluptatibus voluptates nemo eum error porro!</p>
                 </div>
                 <div class="items row">
                     <div class="panel-profissional text-center">
@@ -58,8 +60,8 @@
                         </div>
                         <div class="row">
                             <p>Desenvolvendo em: <strong>
-                                PHP, Java, Javascript, Python, MySQL...
-                            </strong></p>
+                                    PHP, Java, Javascript, Python, MySQL...
+                                </strong></p>
                         </div>
                         <div class="row">
                             <a class="button mid" href="">Veja mais</a>
@@ -74,8 +76,8 @@
                         </div>
                         <div class="row">
                             <p>Desenvolvendo em: <strong>
-                                PHP, Java, Javascript, Python, MySQL...
-                            </strong></p>
+                                    PHP, Java, Javascript, Python, MySQL...
+                                </strong></p>
                         </div>
                         <div class="row">
                             <a class="button mid" href="">Veja mais</a>
@@ -94,13 +96,25 @@
                 <a href=""><img src="images/005-whatsapp.png" alt="Whatsapp Footer Tag"></a>
                 <a href=""><img src="images/027-linkedin.png" alt="Linkedin Footer Tag"></a>
                 <a href=""><img src="images/029-instagram.png" alt="Instagram Footer Tag"></a>
-                <a href=""><img src="images/gmail.svg" alt="Gmail Footer Tag"></a>   
+                <a href=""><img src="images/gmail.svg" alt="Gmail Footer Tag"></a>
             </div>
             <div class="copy-right">
                 <p>2020, Todos os direitos reservados</p>
             </div>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
+        integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    <script>
+        const navbar = document.querySelector('.navbar-fixed-top');
+        window.onscroll = () => {
+            if (window.scrollY > navbar.clientHeight) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        };
+    </script>
 </body>
 
 </html>
