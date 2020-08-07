@@ -37,10 +37,19 @@ header
             size: cover
         
     nav
+        .navbar-nav
+            float: right
+            text-align: center
+            justify-content: center
+        .nav-link:hover
+            padding-bottom: 5px
+            border-bottom: solid 1px $white
+            transition: padding-bottom 0ms linear
+
         .navbar-toggle
             color: $white
             background-color: transparent !important
-        background-color: transparent !important
+        background-color: #000 !important
         transition: background-color 200ms linear
         border: none !important
         
@@ -64,16 +73,19 @@ header
                     font-weight: $bold
                     display: block
     
-        .fa-facebook,
-        .fa-github-alt  
-            color: $white
-            display: block
-            border: solid 2px $white
-            border-radius: 15px
-            padding: 5px
-            width: 30px
-            height: 30px
-            text-align: center
+        //.fa-facebook,
+        //.fa-github-alt  
+        //    color: $white
+        //    display: block
+        //    border: solid 2px $white
+        //    border-radius: 15px
+        //    padding: 5px
+        //    width: 30px
+        //    height: 30px
+        //    text-align: center
+        //.form-inline
+        //    margin: 6px 5px
+        //    float: right
 
     nav.dark-bg
             background-color: #000000 !important

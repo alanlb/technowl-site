@@ -29,15 +29,11 @@
                         </a>
                     </div>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav text-center">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="">Sobre</a></li>
-                            <li><a href="">Equipe</a></li>
-                            <li><a href="">Contato</a></li>
-                        </ul>
-                        <ul class="links-git-face">
-                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-github-alt" aria-hidden="true"></i></a></li>
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="">Sobre</a></li>
+                            <li class="nav-item"><a class="nav-link" href="">Equipe</a></li>
+                            <li class="nav-item"><a class="nav-link" href="">Contato</a></li>
                         </ul>
                     </div>
                 </div>
@@ -120,33 +116,7 @@
         integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
     <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
     <script>
-        const navbar = document.querySelector('.navbar-fixed-top');
-        window.onscroll = () => {
-            $('.navbar-toggle').attr('aria-expanded', 'false')
-            if (window.scrollY > navbar.clientHeight) {
-                navbar.classList.add('dark-bg');
-            } else {
-                if ($('.navbar-toggle').attr('aria-expanded') === "true"){
-                    alert('abri')
-                }else{
-                    navbar.classList.remove('dark-bg');
-                }
-            }
-        };
-        $(".navbar-toggle").click(
-            function () {
-                if ($('.navbar-toggle').attr('aria-expanded') === "true") {
-                    if (window.scrollY > navbar.clientHeight) {
-                        navbar.classList.add('dark-bg');
-                        
-                    }else{
-                        navbar.classList.remove('dark-bg');
-                    }
-                } else {
-                    navbar.classList.add('dark-bg');
-                }
-            }
-        );
+        
     </script>
 </body>
 
