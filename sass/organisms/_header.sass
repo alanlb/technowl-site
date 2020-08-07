@@ -35,31 +35,26 @@ header
             repeat: no-repeat
             attachment: fixed
             size: cover
-
-    
         
     nav
-        background-color: transparent
+        .navbar-toggle
+            color: $white
+            background-color: transparent !important
+        background-color: transparent !important
         transition: background-color 200ms linear
-        padding: 15px 30px 15px 30px
+        border: none !important
         
         .logo
             float: left
+            margin: 10px 0px 5px 5px
             img
                 +img-responsive
                 height: 40px
-        +breakpoint($celular)
-            ul
-                display: none
-
-        +breakpoint($tablet)
-            ul
-                display: none
 
         ul
             float: right
             li  
-                margin-right: 30px
+                margin: 6px 0px 0px 12px
                 display: inline-block
                 a   
                     font-size: 17px
@@ -80,9 +75,11 @@ header
             height: 30px
             text-align: center
 
-    nav.scrolled
+    nav.dark-bg
             background-color: #000000 !important
             transition: background-color 200ms linear
+    .links-git-face
+        margin-top: 8px
     h1
         color: $white
         clear: both
