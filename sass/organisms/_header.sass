@@ -42,10 +42,23 @@ header
             float: right
             text-align: center
             justify-content: center
-        .nav-link:hover
-            padding-bottom: 5px
-            border-bottom: solid 1px $white
-            transition: padding-bottom 0ms linear
+        .nav-link
+            padding-bottom: 5px !important
+            &:hover
+                &:after
+                    width: 80%
+        .nav-link:after
+            content: ""
+            display: table
+            margin: 5px auto 0
+            width: 0%
+            height: 2px
+            background-color: $white
+            +transition(.7s)
+        //.nav-link:hover
+        //    padding-bottom: 5px
+        //    border-bottom: solid 1px $white
+        //    transition: padding-bottom 0ms linear
 
         .navbar-toggle
             color: $white
