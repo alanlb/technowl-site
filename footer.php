@@ -36,6 +36,7 @@
                 nav.removeClass('bg-dark')
             }
         }
+        $('header>div>h3').addClass('h3-bg')
     </script>
 </body>
 
