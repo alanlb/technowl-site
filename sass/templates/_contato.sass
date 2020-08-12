@@ -1,0 +1,37 @@
+header
+    height: 470px
+    background: 
+        image: url('../images/bg-topo2.jpeg')
+        position: top center
+        repeat: no-repeat
+        attachment: fixed
+        size: cover
+        position-y: -100px
+    
+.contato
+    text-align: center
+    font-family: 'serif'
+    font-weight: $bold
+    +color-gradient(90deg, $green, $blue)
+    h2
+        margin: 20px auto
+
+.content
+    margin: 20px 0    
+
+.form,
+.info-add
+    +clearfix
+    +make-md-column(12)
+    +make-sm-column(12)
+    +make-lg-column(6)
+    h3
+        color: $blue
+        font-weight: $bold
+        text-align: center
+
+.info-add
+    text-align: center
+    img
+        +img-responsive
+        margin: auto auto
