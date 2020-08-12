@@ -35,7 +35,8 @@ header
             repeat: no-repeat
             attachment: fixed
             size: cover
-        
+    .bg-dark
+        background-color: #000 !important
     nav
         .navbar-nav
             float: right
@@ -49,10 +50,14 @@ header
         .navbar-toggle
             color: $white
             background-color: transparent !important
-        background-color: #000 !important
+        background-color: #0000009a !important
         transition: background-color 200ms linear
         border: none !important
-        
+            
+        //+breakpoint($celular)
+        //    background-color: #000 !important
+        //+breakpoint($tablet)
+        //    background-color: #000 !important
         .logo
             float: left
             margin: 10px 0px 5px 5px
@@ -106,6 +111,10 @@ header
         font-family: 'serif'
         text-shadow: 18px 10px 0px rgba(0,0,0,0.5)
         text-align: center
+
+.stop-scrolling
+    height: 100%
+    overflow: hidden
 
 
     

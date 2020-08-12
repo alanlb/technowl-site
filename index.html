@@ -7,14 +7,15 @@
 
     <title>TechnOwl - Desenvolvimento de Softwares</title>
     <link rel="stylesheet" href="css/geral.css">
-    <link rel="stylesheet" href="css/plugins.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="bower_components/wow/css/libs/animate.css">
+    <link rel="stylesheet" href="css/plugins.css">
 </head>
 
-<body>
+<body id="body">
     <header>
         <div class="container">
-            <nav class="navbar navbar-default navbar-fixed-top">
+            <nav class="navbar navbar-default navbar-fixed-top" id="navbar-bg">
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -24,7 +25,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="logo" href="index.html">
+                        <a class="logo wow slideInLeft" data-wow-duration="1s" data-wow-delay="0s" href="index.html">
                             <img src="images/logo.png" alt="logo Topo Tag">
                         </a>
                     </div>
@@ -62,7 +63,8 @@
                 <div class="items row">
                     <div class="panel-profissional text-center">
                         <div class="row box-image-prof">
-                            <img class="photo" src="images/minhafoto.png" alt="Foto Alan Tag">
+                            <img class="photo wow pulse" data-wow-duration="1.5s" data-wow-delay="0s"
+                                src="images/minhafoto.png" alt="Foto Alan Tag">
                         </div>
                         <div class="row">
                             <h3>Alan Limeira</h3>
@@ -78,7 +80,8 @@
                     </div>
                     <div class="panel-profissional text-center">
                         <div class="row">
-                            <img class="photo" src="images/minhafoto.png" alt="Foto Alan Tag">
+                            <img class="photo wow pulse" data-wow-duration="1.5s" data-wow-delay="0s"
+                                src="images/minhafoto.png" alt="Foto Alan Tag">
                         </div>
                         <div class="row">
                             <h3>Alan Limeira</h3>
@@ -98,7 +101,7 @@
     </main>
     <footer>
         <div class="container">
-            <div class="logo-footer">
+            <div class="logo-footer wow flip" data-wow-duration="1.5s" data-wow-delay="0s">
                 <a href="#"><img src="images/logo-footer.png" alt="Logo Footer Tag"></a>
             </div>
             <div class="social-medias">
@@ -115,8 +118,24 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
         integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
     <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/wow/dist/wow.min.js"></script>
     <script>
-        
+        new WOW().init()
+        var nav = $('#navbar-bg')
+        var height = nav.height()
+        $('.navbar-toggle').click(function () {
+            if (window.pageYOffset < height) {
+                nav.toggleClass('bg-dark')
+            }
+            $('#body').toggleClass('stop-scrolling')
+        })
+        window.onscroll = function () {
+            if (window.pageYOffset > height) {
+                nav.addClass('bg-dark')
+            } else {
+                nav.removeClass('bg-dark')
+            }
+        }
     </script>
 </body>
 
